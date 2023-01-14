@@ -21,7 +21,7 @@ return new class extends Migration
             $table->char('slider_image',100)->nullable();
             $table->char('thumb_image',100)->nullable();
             $table->enum('package', ['simple','complex','advanced','super_complex']);
-            $table->enum('type', ['thumb','slider']);
+            // $table->enum('type', ['thumb','slider']);
             $table->enum('status', ['active','deactive'])->default('active');
             $table->timestamps();
         });

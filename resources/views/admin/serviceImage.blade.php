@@ -47,7 +47,7 @@
                                 </tr>
                                 <tr>
                                     <th>Select Package</th>
-                                    <th>
+                                    <th colspan="2">
                                         <select name="package" id="" class="form-control form-select">
                                             <option value="">Select Package</option>
                                             <option value="simple">Simple</option>
@@ -56,7 +56,7 @@
                                             <option value="super_complex">Super Complex</option>
                                         </select>
                                     </th>
-                                    <th>Image Type</th>
+                                    {{-- <th>Image Type</th>
                                     <th>
                                         <select name="type" id="" class="form-control form-select">
                                             <option value="">Select Image Type</option>
@@ -64,7 +64,7 @@
                                             <option value="slider">Slider</option>
                                             
                                         </select>
-                                    </th>
+                                    </th> --}}
                                 </tr>
                                 <tr>
                                     <th>Slider Image</th>
@@ -113,7 +113,7 @@
                                     <th>Package Name</th>
                                     <th>Slider Image</th>
                                     <th>Thumb Image</th>
-                                    <th>Type</th>
+                                    {{-- <th>Type</th> --}}
                                     <th>Status</th>
                                     <th>Action</th>
                                     
@@ -133,7 +133,7 @@
                                         <td>
                                             <img src="{{url('aminAsset/image/pricing/packageImage/',$v->thumb_image)}}" alt="">
                                         </td>
-                                        <td>{{$v->type}}</td>
+                                        {{-- <td>{{$v->type}}</td> --}}
                                         <td>{{$v->status}}</td>
                                         <td>
                                             <a href="{{route('editServiceImage',$v->id)}}" style="color: yellowgreen" class="btn"><i class="fas fa-edit"></i></a>

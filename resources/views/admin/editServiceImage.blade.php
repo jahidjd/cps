@@ -49,7 +49,7 @@
                                 </tr>
                                 <tr>
                                     <th>Select Package</th>
-                                    <th>
+                                    <th colspan="2">
                                         <select name="package" id="" class="form-control form-select">
                                             <option value="{{$serviceImage->package}}">{{$serviceImage->package}}</option>
                                             <option value="simple">Simple</option>
@@ -58,7 +58,7 @@
                                             <option value="super_complex">Super Complex</option>
                                         </select>
                                     </th>
-                                    <th>Image Type</th>
+                                    {{-- <th>Image Type</th>
                                     <th>
                                         <select name="type" id="" class="form-control form-select">
                                             <option value="{{$serviceImage->type}}">{{$serviceImage->type}}</option>
@@ -66,7 +66,7 @@
                                             <option value="slider">Slider</option>
                                             
                                         </select>
-                                    </th>
+                                    </th> --}}
                                 </tr>
                                 <tr>
                                     <th>Slider Image</th>

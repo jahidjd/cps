@@ -13,7 +13,7 @@ class ServiceImage extends Model
         'service_id',
         'title',
         'package',
-        'type',
+        // 'type',
         'status',
         'slider_image',
         'thumb_image',

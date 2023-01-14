@@ -771,14 +771,14 @@ class AdminController extends Controller
             'title'=>'required',
             'service_id'=>'required',
             'package'=>'required',
-            'type'=>'required',
+            // 'type'=>'required',
              
         ]);
         $data = [
             'title'=>$request->title,
             'service_id'=>$request->service_id,
             'package'=>$request->package,
-            'type'=>$request->type,
+            // 'type'=>$request->type,
         ];
         if($request->file('slider_image')){
             $image = Image::make($request->file('slider_image'));
@@ -814,7 +814,7 @@ class AdminController extends Controller
             'title'=>$request->title,
             'service_id'=>$request->service_id,
             'package'=>$request->package,
-            'type'=>$request->type,
+            // 'type'=>$request->type,
         ];
         if($request->file('slider_image')){
             $image = Image::make($request->file('slider_image'));
