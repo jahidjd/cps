@@ -873,7 +873,7 @@
                                                         data-elementor-lightbox-slideshow="6a646a31"
                                                         data-elementor-lightbox-title="{{$v->title}}"
                                                         e-action-hash="#{{url('aminAsset/image/works/',$v->image)}}"
-                                                        href='{{url(' aminAsset/image/works/',$v->image)}}'><img
+                                                        href='{{url('aminAsset/image/works/',$v->image)}}'><img
                                                             width="950" height="615"
                                                             src="{{url('aminAsset/image/works/',$v->image)}}"
                                                             class="attachment-full size-full"
