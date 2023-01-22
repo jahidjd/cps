@@ -319,16 +319,20 @@
                                                 data-id="3e688c5" data-element_type="widget"
                                                 data-widget_type="button.default">
                                                 <div class="elementor-widget-container">
-                                                    <div class="elementor-button-wrapper">
-                                                        {{-- <a href="{{route('freeTrial')}}"
-                                                            class="elementor-button-link elementor-button elementor-size-lg"
-                                                            role="button">
-                                                            <span class="elementor-button-content-wrapper">
-                                                                <span class="elementor-button-text">Get a Free
-                                                                    Trial</span>
-                                                            </span>
-                                                        </a> --}}
-                                                    </div>
+                                                    @foreach ($price as $p)
+                                                    @if ($p->service_id==$v->service_id)
+                                                    <div class="elementor-button-wrapper ">
+                                                    <a href="{{route('serviceChoose',$v->service_id)}}"
+                                                        class="elementor-button-link elementor-button elementor-size-lg"
+                                                        role="button">
+                                                        <span class="elementor-button-content-wrapper ">
+                                                            <span class="elementor-button-text">Order Now</span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                    @endif
+
+                                                    @endforeach
                                                 </div>
                                             </div>
                                         </div>
@@ -342,21 +346,7 @@
                                                 data-id="e1b3394" data-element_type="widget"
                                                 data-widget_type="button.default">
                                                
-                                                    @foreach ($price as $p)
-                                                    @if ($p->service_id==$v->service_id)
-                                                    <div class="elementor-button-wrapper "
-                                                    >
-                                                    <a href="{{route('serviceChoose',$v->service_id)}}"
-                                                        class="elementor-button-link elementor-button elementor-size-lg"
-                                                        role="button">
-                                                        <span class="elementor-button-content-wrapper ">
-                                                            <span class="elementor-button-text">Not Ok</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                    @endif
-
-                                                    @endforeach
+                                                   
 
                                                
                                             </div>
@@ -483,21 +473,7 @@
                                                 data-id="3e688c5" data-element_type="widget"
                                                 data-widget_type="button.default">
                                                 <div class="elementor-widget-container">
-                                                    @foreach ($price as $p)
-                                                        @if ($p->service_id==$v->service_id)
-                                                        <div class="elementor-button-wrapper " >
-                                                            <a href="{{route('serviceChoose',$v->service_id)}}"
-                                                                class="elementor-button-link elementor-button elementor-size-lg btnSm"
-                                                                role="button" style="position: absolute;
-                                                              
-                                                                margin-left: -60px;">
-                                                                <span class="elementor-button-content-wrapper">
-                                                                    <span class="elementor-button-text">ok</span>
-                                                                </span>
-                                                            </a>
-                                                        </div>
-                                                        @endif
-                                                    @endforeach
+                                                    
                                                     
                                                 </div>
                                             </div>
@@ -512,9 +488,21 @@
                                                 data-id="e1b3394" data-element_type="widget"
                                                 data-widget_type="button.default">
                                                 <div class="elementor-widget-container">
-                                                    <div class="elementor-button-wrapper">
-                                                        
-                                                    </div>
+                                                    @foreach ($price as $p)
+                                                        @if ($p->service_id==$v->service_id)
+                                                        <div class="elementor-button-wrapper " >
+                                                            <a href="{{route('serviceChoose',$v->service_id)}}"
+                                                                class="elementor-button-link elementor-button elementor-size-lg btnSm"
+                                                                role="button" style="position: absolute;
+                                                              
+                                                                margin-left: -60px;">
+                                                                <span class="elementor-button-content-wrapper">
+                                                                    <span class="elementor-button-text">Order Now</span>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        @endif
+                                                    @endforeach
                                                 </div>
                                             </div>
                                         </div>
