@@ -14,6 +14,24 @@
         }
 
     }
+    @media (max-width: 2500px) {
+
+        /* your conditional / responsive CSS inside this condition */
+        .btnSm{
+            margin-top: -150px;
+        }
+          
+
+    }
+    @media (max-width: 763px) {
+
+        /* your conditional / responsive CSS inside this condition */
+        .btnSm{
+            margin-top: 0px;
+        }
+          
+
+    }
 
     @media (min-width:1706px) {
 
@@ -65,7 +83,7 @@
         .buttonLeft {
             margin-right: -215%;
             margin-top: -27%;
-            width: 100%;
+            /* width: 100%; */
         }
 
         .butonRight {
@@ -104,6 +122,7 @@
 
 
         }
+        
 
     }
 </style>
@@ -325,13 +344,13 @@
                                                
                                                     @foreach ($price as $p)
                                                     @if ($p->service_id==$v->service_id)
-                                                    <div class="elementor-button-wrapper  butonRight"
+                                                    <div class="elementor-button-wrapper "
                                                     >
                                                     <a href="{{route('serviceChoose',$v->service_id)}}"
                                                         class="elementor-button-link elementor-button elementor-size-lg"
                                                         role="button">
                                                         <span class="elementor-button-content-wrapper ">
-                                                            <span class="elementor-button-text">Order Now</span>
+                                                            <span class="elementor-button-text">Not Ok</span>
                                                         </span>
                                                     </a>
                                                 </div>
@@ -466,12 +485,14 @@
                                                 <div class="elementor-widget-container">
                                                     @foreach ($price as $p)
                                                         @if ($p->service_id==$v->service_id)
-                                                        <div class="elementor-button-wrapper buttonLeft" style="width: 307%">
+                                                        <div class="elementor-button-wrapper " >
                                                             <a href="{{route('serviceChoose',$v->service_id)}}"
-                                                                class="elementor-button-link elementor-button elementor-size-lg"
-                                                                role="button">
+                                                                class="elementor-button-link elementor-button elementor-size-lg btnSm"
+                                                                role="button" style="position: absolute;
+                                                              
+                                                                margin-left: -60px;">
                                                                 <span class="elementor-button-content-wrapper">
-                                                                    <span class="elementor-button-text">Order Now</span>
+                                                                    <span class="elementor-button-text">ok</span>
                                                                 </span>
                                                             </a>
                                                         </div>
